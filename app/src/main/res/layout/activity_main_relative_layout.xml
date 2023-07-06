@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
     <TextView
+            android:id="@+id/txtLayoutHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android Development by Ronak"
@@ -16,9 +13,11 @@
             android:textColor="#0d47a1"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:layout_alignParentTop="true"
     />
 
-    <TextView android:layout_width="wrap_content"
+    <TextView android:id="@+id/txtLayoutSubHeader"
+            android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Android is fun"
               android:padding="8dp"
@@ -26,17 +25,21 @@
               android:textColor="#d84315"
               android:textSize="18sp"
               android:textStyle="italic"
+              android:layout_below="@id/txtLayoutHeader"
     />
 
     <ImageView
+            android:id="@+id/imgOne"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:src="@drawable/one"
+            android:layout_centerInParent="true"
     />
 
     <Button
+            android:id="@+id/btnClickHere"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -45,20 +48,25 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:layout_alignParentBottom="true"
     />
 
-    <EditText android:layout_width="match_parent"
+    <EditText android:id="@+id/Et1" android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:hint="Enter your Name"
               android:layout_margin="10dp"
               android:inputType="text"
+              android:layout_below="@id/imgOne"
     />
 
-    <EditText android:layout_width="match_parent"
+    <EditText android:id="@+id/Et2" android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:hint="Password"
               android:layout_margin="10dp"
               android:inputType="text"
+              android:layout_below="@id/Et1"
     />
 
-</LinearLayout>
+
+
+</RelativeLayout>
